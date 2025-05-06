@@ -5,7 +5,7 @@ import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const port = 4810;
+const port = 8081;
 const app = express();
 
 const serverStart = new Date();
@@ -26,10 +26,17 @@ const serveHTML = (route, file) => {
 
 const htmlRoutes = [
   { route: "/", file: "../../index.html" },
+  { route: "/github", file: "../../github.html" },
+  { route: "/github/organization", file: "../../githuborg.html" },
   { route: "/tos", file: "../../tos.html" },
-  { route: "/listing", file: "../../legal.html" },,
+  { route: "/privacy", file: "../../privacy.html" },
+  { route: "/morbius", file: "../../morbius.html" },
   { route: "/invite", file: "../../invite.html" },
+  { route: "/premium", file: "../../premium.html" },
   { route: "/support", file: "../../support.html" },
+  { route: "/partners", file: "../../partners.html" },
+  { route: "/profiles/:userId", file: "../../profiles.html" },
+  { route: "/survey", file: "../../review.html" },
 ];
 
 htmlRoutes.forEach((route) => serveHTML(route.route, route.file));

@@ -1,6 +1,6 @@
 async function fetchBotStats() {
   try {
-    const response = await fetch("https://api.portalnet.work/stats");
+    const response = await fetch("https://api.pridebot.xyz/stats");
     const data = await response.json();
     document.getElementById("totalServers").textContent =
       data.currentGuildCount.toLocaleString();
@@ -12,15 +12,10 @@ async function fetchBotStats() {
     document.getElementById("comptotalUsers").textContent = formatUserCount(
       data.totalUserCount
     );
-    document.getElementById("totalNetwork").textContent =
-      data.networkServersCount.toLocaleString();
-    //document.getElementById("comptotalNetwork").textContent = formatServerCount(
-    //  data.networkServersCount
-    // );
-    document.getElementById("totalMessages").textContent =
-      data.messagecount.toLocaleString();
-    document.getElementById("comptotalMessages").textContent =
-      formatMessageCount(data.messagecount);
+    document.getElementById("totalcommandsCount").textContent =
+      data.commandsCount.toLocaleString();
+    document.getElementById("totalcommandUsage").textContent =
+      data.totalUsage.toLocaleString();
   } catch (error) {
     console.error("Failed to fetch bot stats:", error);
   }
@@ -34,13 +29,6 @@ function formatServerCount(count) {
 }
 
 function formatUserCount(count) {
-  if (count >= 1000) {
-    return (count / 1000).toFixed(1) + "k+";
-  }
-  return count.toLocaleString();
-}
-
-function formatMessageCount(count) {
   if (count >= 1000) {
     return (count / 1000).toFixed(1) + "k+";
   }

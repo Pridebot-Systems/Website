@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("https://api.portalnet.work/commands")
+  fetch("https://api.pridebot.xyz/commands")
     .then((response) => response.json())
     .then((data) => {
       const accordionContainer = document.querySelector(".accordion");
       accordionContainer.innerHTML = "";
 
       for (const [category, details] of Object.entries(data)) {
-        if (category === "Admin") continue;
+        if (category === "Dev") continue;
 
         // Create accordion item
         const accordionItem = document.createElement("div");
@@ -33,17 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const paragraph = document.createElement("p");
         details.commands.forEach((command) => {
-          const commandEntry = document.createElement("div");
-
           const strong = document.createElement("strong");
-          strong.textContent = `/${command.name}: `;
-
-          const description = document.createElement("span");
-          description.textContent = command.description;
-
-          commandEntry.appendChild(strong);
-          commandEntry.appendChild(description);
-          paragraph.appendChild(commandEntry);
+          strong.textContent = `/${command}`;
+          paragraph.appendChild(strong);
+          paragraph.innerHTML += "<br />";
         });
 
         accordionContent.appendChild(paragraph);
