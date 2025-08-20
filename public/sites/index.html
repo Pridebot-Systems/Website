@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link
@@ -23,10 +23,7 @@
       content="Pridebot - Your Discord bot to LGBTQ Identities! Explore terms, definitions, resources, and more to be yourself."
     />
     <meta name="og:title" content="Home | Pridebot" />
-    <meta
-      name="og:image"
-      content="https://pridebot.xyz/pridebotlogo.png"
-    />
+    <meta name="og:image" content="https://pridebot.xyz/pridebotlogo.png" />
     <meta property="og:site_name" content="Pridebot" />
     <meta name="theme-color" content="#FF00ea" />
     <link
@@ -35,488 +32,652 @@
       sizes="300x250"
       href="https://cdn.discordapp.com/emojis/1108228682184654908.png"
     />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Alfa+Slab+One"
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@300;400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/ionicons.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
   <body style="background-color: var(--background)">
-    <div id="top" style="height: 12px">
-      <nav
-        class="navbar navbar-light navbar-expand fixed-top"
-        style="
-          color: var(--main-color);
-          border-top-width: 6px;
-          border-top-style: solid;
-          background: var(--background);
-        "
-      >
-        <div class="container-fluid">
-          <a
-            class="navbar-brand"
-            href="#"
-            style="
-              color: var(--main-color);
-              font-family: 'Alfa Slab One', cursive;
-            "
-          >
-            Pridebot </a
-          ><button
-            data-toggle="collapse"
-            class="navbar-toggler"
-            data-target="#navcol-1"
-          >
-            <span class="sr-only">Toggle navigation</span
-            ><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active smoothScroll"
-                  href="#feature"
-                  style="color: var(--text-color)"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link smoothScroll"
-                  href="#commands"
-                  style="color: var(--text-color)"
-                  >Commands</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://pridebot.xyz/invite"
-                  style="color: var(--text-color)"
-                  >Invite</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://pridebot.xyz/support"
-                  style="color: var(--text-color)"
-                  >Support</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://pridebot.xyz/partners"
-                  style="color: var(--text-color)"
-                  >Partners</a
-                >
-              </li>
-	      <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://pridebot.xyz/premium"
-                  style="color: var(--text-color)"
-                  >Premium</a
-                >
-              </li>
-             <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://pfp.pridebot.xyz"
-                  style="color: var(--text-color)"
-                  >Profiles</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <header
-      class="d-xl-flex flex-column justify-content-xl-center align-items-xl-center"
-      style="height: 418px; text-align: center; margin: 55px"
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-modern"
+      style="
+        background: rgba(29, 29, 30, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 112, 243, 0.2);
+      "
     >
-      <img
-        class="rounded"
-        src="https://pridebot.xyz/pridebotlogo.png"
-        width="200"
-        height="200"
-        style="margin-top: 15px"
-      />
-      <h1
-        class="d-xl-flex justify-content-xl-start"
-        style="color: var(--text-color)"
-      >
-        Pridebot
-      </h1>
-      <p style="color: var(--secondary-text-color)">
-        Your Discord bot to LGBTQ Identities! Explore terms, definitions,
-        resources, and more to be yourself.
-      </p>
-      <div class="tada animated">
-        <div role="group" class="btn-group">
-          <a
-            href="https://pridebot.xyz/invite"
-            class="btn btn-primary shadow-none"
-            type="button"
-            style="
-              margin: 5px;
-              background-color: var(--main-color);
-              border-color: var(--main-color);
-              border-radius: 10px;
-            "
-            >Invite Me</a
-          >
-          <a
-            class="btn btn-primary smoothScroll shadow-none"
-            role="button"
-            style="
-              margin: 5px;
-              background-color: var(--main-color);
-              border-color: var(--main-color);
-              border-radius: 10px;
-            "
-            href="#commands"
-            >Commands</a
-          >
-          <a
-            class="btn btn-primary smoothScroll shadow-none"
-            role="button"
-            style="
-              margin: 5px;
-              background-color: var(--main-color);
-              border-color: var(--main-color);
-              border-radius: 10px;
-            "
-            href="https://pridebot.xyz/support"
-            >Support</a
-          >
-        </div>
-      </div>
-    </header>
-    <div id="feature" style="height: 90px; background: var(--secondary)">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="var(--background)"
-            fill-opacity="1"
-            d="M0,96L40,112C80,128,160,160,240,144C320,128,400,64,480,48C560,32,640,64,720,69.3C800,75,880,53,960,58.7C1040,64,1120,96,1200,96C1280,96,1360,64,1400,48L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
-    </div>
-    <div class="features-boxed" style="background: var(--secondary)">
-      <div class="container" style="color: var(--main-color)">
-        <div class="intro">
-          <h2 class="text-center" style="color: var(--text-color)">
-            Bot Features
-          </h2>
-        </div>
-        <div class="row justify-content-center features">
-          <div class="col-sm-6 col-md-5 col-lg-4 item">
-            <div id="features" class="box">
-              <!-- Icon -->
-              <img
-                src="https://cdn.discordapp.com/emojis/1112602480128299079.png"
-                alt="Good Resources Icon"
-                style="width: 70px; height: auto; margin-bottom: 15px"
-              />
-              <!-- Adjust size as needed -->
-              <h3 class="name">Reliable Resource</h3>
-              <p class="description" style="color: var(--secondary-text-color)">
-                Made by other LGBTQIA+ users, Pridebot information is reliable
-                and all outside resources are verifiable and safe.
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-5 col-lg-4 item">
-            <div id="features" class="box">
-              <!-- Icon -->
-              <img
-                src="https://cdn.discordapp.com/emojis/1195874659338555462.png"
-                alt="User Icon"
-                style="width: 70px; height: auto; margin-bottom: 15px"
-              />
-              <h3 class="name">Trusted by Many</h3>
-              <p class="description" style="color: var(--secondary-text-color)">
-                Used by <span id="comptotalServers">4600+</span> communities and
-                <span id="comptotalUsers">390k+</span> users, Pridebot has
-                earned trust across many communities.<br />
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-5 col-lg-4 item">
-            <div id="features" class="box">
-              <!-- Icon -->
-              <img
-                src="https://cdn.discordapp.com/emojis/1195870894501941450.png"
-                alt="Command Icon"
-                style="width: 70px; height: auto; margin-bottom: 15px"
-              />
-              <h3 class="name">Easy to use and Clean Commands</h3>
-              <p class="description" style="color: var(--secondary-text-color)">
-                All of Pridebot commands are easy to use and clean responses for
-                best possibly user experience.<br />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div></div>
-    </div>
-    <div style="background-color: var(--background)">
-      <div style="height: 150px; overflow: hidden">
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style="height: 100%; width: 100%"
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="#"
+          style="
+            color: var(--main-color);
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 1.5rem;
+          "
         >
-          <path
-            d="M-41.53,-9.56 C167.83,173.98 302.14,-60.89 534.09,89.10 L500.00,0.00 L0.00,0.00 Z"
-            style="stroke: none; fill: var(--secondary)"
-          ></path>
-        </svg>
+          <img
+            src="https://pridebot.xyz/pridebotlogo.png"
+            alt="Pridebot Logo"
+            width="40"
+            height="40"
+            class="me-2 rounded"
+            style="box-shadow: 0 0 15px rgba(255, 112, 243, 0.3)"
+          />
+          Pridebot
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="#features"
+                style="color: var(--text-color)"
+                >Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="#stats"
+                style="color: var(--text-color)"
+                >Stats</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="#commands"
+                style="color: var(--text-color)"
+                >Commands</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/invite"
+                style="color: var(--text-color)"
+                >Invite</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/support"
+                style="color: var(--text-color)"
+                >Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/partners"
+                style="color: var(--text-color)"
+                >Partners</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/premium"
+                style="color: var(--text-color)"
+                >Premium</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pfp.pridebot.xyz"
+                style="color: var(--text-color)"
+                >Profiles</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div id="commands">
-      <section>
-        <div class="container-fluid text-white">
-          <h2 class="text-center pb-1 pt-3" style="color: var(--text-color)">
-            Bot Stats
-          </h2>
-          <div
-            class="row row-cols-3 justify-content-center"
-            style="color: var(--secondary-text-color)"
-          >
-            <div
-              class="col-auto col-md-3 text-center pb-5 pt-5 number-item love_counter"
-            >
-              <h1 style="font-size: 70px" id="totalServers">
-                <strong>4590</strong>
-              </h1>
-              <h4 style="color: var(--main-color); margin-top: -6px">
-                Total Servers
-              </h4>
-            </div>
-            <div
-              class="col-auto col-md-3 text-center align-self-center pb-5 pt-5 love_counter"
-            >
-              <h1 style="font-size: 70px" id="totalUsers">
-                <strong>380000</strong>
-              </h1>
-              <h4 style="color: var(--main-color); margin-top: -6px">
-                Total Users
-              </h4>
-            </div>
-            <div
-              class="col-auto col-md-3 text-center align-self-center pb-5 pt-5 love_counter"
-            >
-              <h1 style="font-size: 70px" id="totalcommandsCount">
-                <strong>39</strong>
-              </h1>
-              <h4 style="color: var(--main-color); margin-top: -6px">
-                Command Count
-              </h4>
-            </div>
-            <div
-              class="col-auto col-md-3 text-center align-self-center pb-5 pt-5 love_counter"
-            >
-              <h1 style="font-size: 70px" id="totalcommandUsage">
-                <strong>578400</strong>
-              </h1>
-              <h4 style="color: var(--main-color); margin-top: -6px">
-                Commands Used
-              </h4>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-wrapper">
+      <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <div
+                class="hero-content animate__animated animate__fadeInUp animate__slow"
+              >
+                <div class="hero-logo-container mb-4">
+                  <img
+                    class="hero-logo"
+                    src="https://pridebot.xyz/pridebotlogo.png"
+                    alt="Pridebot Logo"
+                  />
+                </div>
+                <h1 class="hero-title mb-4" style="color: var(--text-color)">
+                  Welcome to
+                  <span style="color: var(--main-color)">Pridebot</span>
+                </h1>
+                <p
+                  class="hero-subtitle mb-5"
+                  style="color: var(--secondary-text-color)"
+                >
+                  Your Discord bot for LGBTQ+ Identities! Explore terms,
+                  definitions, resources, and more to be yourself.
+                </p>
+                <div class="hero-buttons">
+                  <a
+                    href="https://pridebot.xyz/invite"
+                    class="btn btn-primary btn-hero me-3 mb-3"
+                  >
+                    <i class="fa fa-plus me-2"></i>Invite Pridebot
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-hero mb-3"
+                    href="#features"
+                  >
+                    <i class="fa fa-info-circle me-2"></i>Learn More
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <div class="container">
-        <h2 class="text-center pb-5">Commands</h2>
-        <div class="accordion"></div>
-      </div>
+
+      <!-- Features Section -->
+      <section id="features" class="features-section">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title" style="color: var(--text-color)">
+                Why Choose Pridebot?
+              </h2>
+              <p
+                class="section-subtitle"
+                style="color: var(--secondary-text-color)"
+              >
+                Discover what makes Pridebot the perfect companion for your
+                Discord community
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="feature-card">
+                <div class="feature-icon mb-3">
+                  <img
+                    src="https://cdn.discordapp.com/emojis/1112602480128299079.png"
+                    alt="Reliable Resources"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <h4 class="feature-title">Reliable Resources</h4>
+                <p
+                  class="feature-description"
+                  style="color: var(--secondary-text-color)"
+                >
+                  Created by LGBTQIA+ users for the community. All information
+                  is thoroughly verified and all external resources are safe and
+                  trustworthy.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="feature-card">
+                <div class="feature-icon mb-3">
+                  <img
+                    src="https://cdn.discordapp.com/emojis/1195874659338555462.png"
+                    alt="Trusted by Many"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <h4 class="feature-title">Trusted by Many</h4>
+                <p
+                  class="feature-description"
+                  style="color: var(--secondary-text-color)"
+                >
+                  Used by
+                  <span
+                    id="comptotalServers"
+                    style="color: var(--main-color); font-weight: 600"
+                    >4600+</span
+                  >
+                  communities and
+                  <span
+                    id="comptotalUsers"
+                    style="color: var(--main-color); font-weight: 600"
+                    >390k+</span
+                  >
+                  users worldwide. Join the growing family!
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="feature-card">
+                <div class="feature-icon mb-3">
+                  <img
+                    src="https://cdn.discordapp.com/emojis/1195870894501941450.png"
+                    alt="Easy Commands"
+                    width="60"
+                    height="60"
+                  />
+                </div>
+                <h4 class="feature-title">Intuitive Commands</h4>
+                <p
+                  class="feature-description"
+                  style="color: var(--secondary-text-color)"
+                >
+                  Clean, easy-to-use slash commands with beautiful responses.
+                  Designed for the best possible user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section id="stats" class="stats-section">
+        <div class="stats-wave-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="var(--secondary)"
+              fill-opacity="1"
+              d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,218.7C672,224,768,192,864,181.3C960,171,1056,181,1152,192C1248,203,1344,213,1392,218.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title" style="color: var(--text-color)">
+                Live Statistics
+              </h2>
+              <p
+                class="section-subtitle"
+                style="color: var(--secondary-text-color)"
+              >
+                Real-time data showing Pridebot's growing impact
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="stat-card">
+                <div class="stat-icon mb-3">
+                  <i class="fa fa-server" style="color: var(--main-color)"></i>
+                </div>
+                <div class="stat-number" id="totalServers">4,590</div>
+                <div class="stat-label">Discord Servers</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="stat-card">
+                <div class="stat-icon mb-3">
+                  <i class="fa fa-users" style="color: var(--main-color)"></i>
+                </div>
+                <div class="stat-number" id="totalUsers">380,000</div>
+                <div class="stat-label">Total Users</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="stat-card">
+                <div class="stat-icon mb-3">
+                  <i class="fa fa-code" style="color: var(--main-color)"></i>
+                </div>
+                <div class="stat-number" id="totalcommandsCount">39</div>
+                <div class="stat-label">Available Commands</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="stat-card">
+                <div class="stat-icon mb-3">
+                  <i
+                    class="fa fa-chart-line"
+                    style="color: var(--main-color); margin-right: 8px"
+                  ></i>
+                  <i class="fa fa-bolt" style="color: var(--main-color)"></i>
+                </div>
+                <div class="stat-number" id="totalcommandUsage">578,400</div>
+                <div class="stat-label">Commands Used</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commands Section -->
+      <section
+        id="commands"
+        class="commands-section"
+        style="background: var(--secondary)"
+      >
+        <div class="commands-wave-top">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="var(--background)"
+              fill-opacity="1"
+              d="M0,96L40,112C80,128,160,160,240,144C320,128,400,64,480,48C560,32,640,64,720,69.3C800,75,880,53,960,58.7C1040,64,1120,96,1200,96C1280,96,1360,64,1400,48L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2 class="section-title" style="color: var(--text-color)">
+                Command Categories
+              </h2>
+              <p
+                class="section-subtitle"
+                style="color: var(--secondary-text-color)"
+              >
+                Explore all the commands Pridebot has to offer
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div
+                class="accordion modern-accordion"
+                id="commandsAccordion"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="footer-section" style="background: var(--secondary)">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 text-center mb-4">
+              <a
+                href="#"
+                class="footer-logo d-inline-flex align-items-center text-decoration-none mb-3"
+              >
+                <img
+                  src="https://pridebot.xyz/pridebotlogo.png"
+                  alt="Pridebot Logo"
+                  width="32"
+                  height="32"
+                  class="me-2 rounded"
+                />
+                <span
+                  style="
+                    color: var(--main-color);
+                    font-family: 'Alfa Slab One', cursive;
+                    font-size: 1.25rem;
+                  "
+                >
+                  Pridebot
+                </span>
+              </a>
+              <p
+                style="color: var(--secondary-text-color); margin-bottom: 2rem"
+              >
+                Making Discord communities more inclusive, one server at a time.
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="footer-links-grid">
+                <!-- Community Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Community
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://github.com/Sdriver1/Pridebot"
+                      class="footer-link"
+                    >
+                      <i class="fa fa-github me-2"></i>GitHub
+                    </a>
+                    <a href="https://pridebot.xyz/support" class="footer-link">
+                      <img
+                        src="https://cdn.discordapp.com/emojis/1108417509624926228.png"
+                        alt="Discord"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      Support Server
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Vote Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Vote for Us
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://discordlist.gg/bot/1101256478632972369/vote"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://discordlist.gg/img/brand/logo.svg"
+                        alt="DiscordList"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      DiscordList
+                    </a>
+                    <a
+                      href="https://top.gg/bot/1101256478632972369/vote"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://cdn.discordapp.com/emojis/1195866944482590731.png"
+                        alt="Top.gg"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      Top.gg
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Follow Us
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://x.com/pridebotdiscord?s=21&t=vvy-KvCpsjPgQFNN8_DkAQ"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
+                        alt="X/Twitter"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      𝕏/Twitter
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@pridebotdiscord?_t=8kSLVmDoEcp&_r=1"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://cdn.inspireuplift.com/uploads/images/seller_products/1690970852_a2-01.png"
+                        alt="TikTok"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      TikTok
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Legal
+                  </h6>
+                  <div class="footer-links-list">
+                    <a href="https://pridebot.xyz/tos" class="footer-link"
+                      >Terms of Service</a
+                    >
+                    <a href="https://pridebot.xyz/privacy" class="footer-link"
+                      >Privacy Policy</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 2rem 0" />
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <p
+                style="
+                  color: var(--secondary-text-color);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                © 2023-2025 Pridebot. All rights reserved.
+              </p>
+              <p style="color: var(--secondary-text-color); margin-bottom: 0">
+                Developed with ❤️ by
+                <a
+                  href="https://sdriver1.dev"
+                  style="color: var(--main-color); text-decoration: none"
+                >
+                  Sdriver1
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top">
+          <a href="#" class="btn-back-to-top">
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+      </footer>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="var(--secondary)"
-        fill-opacity="1"
-        d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,218.7C672,224,768,192,864,181.3C960,171,1056,181,1152,192C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="footer-dark">
-      <div class="row">
-        <div class="col item social">
-          <a class="smoothScroll" href="#top">
-            <i class="icon ion-android-arrow-up"></i>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col text-center">
-          <p class="copyright" style="color: var(--text-color)">
-            Pridebot © 2023-2024
-          </p>
-          <p class="developed-by" style="color: var(--text-color)">
-            Developed by
-            <a
-              href="https://discordapp.com/users/691506668781174824"
-              style="color: var(--main-color)"
-              >Sdriver1</a
-            >
-          </p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="footer-links" style="padding: 20px">
-          <a
-            href="https://github.com/Sdriver1/Pridebot"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <i
-              class="fa fa-github"
-              aria-hidden="true"
-              style="font-size: 24px; vertical-align: middle"
-            ></i>
-            <span style="vertical-align: middle">GitHub</span>
-          </a>
-          <a
-            href="https://pridebot.xyz/support"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.discordapp.com/emojis/1108417509624926228.png"
-              alt="Wumpus Store Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Support Server</span>
-          </a>
-
-          <div class="link-divider"></div>
-          <a
-            href="https://discordlist.gg/bot/1101256478632972369/vote"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://discordlist.gg/img/brand/logo.svg"
-              alt="discordlist Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">DiscordList</span>
-          </a>
-          <a
-            href="https://top.gg/bot/1101256478632972369/vote"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.discordapp.com/emojis/1195866944482590731.png"
-              alt="Topgg Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Top.gg</span>
-          </a>
-          <div class="link-divider"></div>
-          <a
-            href="https://x.com/pridebotdiscord?s=21&t=vvy-KvCpsjPgQFNN8_DkAQ"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
-              alt="Twitter Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">𝕏/Twitter</span>
-          </a>
-          <a
-            href="https://www.tiktok.com/@pridebotdiscord?_t=8kSLVmDoEcp&_r=1"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.inspireuplift.com/uploads/images/seller_products/1690970852_a2-01.png"
-              alt="Tiktok Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Tiktok</span>
-          </a>
-          <div class="link-divider"></div>
-          <a
-            href="https://pridebot.xyz/tos"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <span style="vertical-align: middle">TOS</span>
-          </a>
-          <a
-            href="https://pridebot.xyz/privacy"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 30px;
-              text-decoration: none;
-            "
-          >
-            <span style="vertical-align: middle">Privacy Policy</span>
-          </a>
-        </div>
-      </div>
-    </div>
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Counting.js"></script>
-    <script src="assets/js/untitled.js"></script>
-    <script src="assets/js/botstats.js"></script>
-    <script src="assets/js/commands.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGDNCX5SK7"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/Counting.js"></script>
+    <script src="../assets/js/untitled.js"></script>
+    <script src="../assets/js/botstats.js"></script>
+    <script src="../assets/js/commands.js"></script>
+
+    <!-- Smooth Scrolling -->
+    <script>
+      // Smooth scrolling for anchor links
+      // Smooth scrolling for in-page anchors (but not bare "#")
+      document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // Back-to-top or brand links that are just "#"
+      document.querySelectorAll('a[href="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      // Back to top button functionality
+      window.addEventListener("scroll", function () {
+        const backToTop = document.querySelector(".btn-back-to-top");
+        if (window.pageYOffset > 300) {
+          backToTop.style.opacity = "1";
+          backToTop.style.visibility = "visible";
+        } else {
+          backToTop.style.opacity = "0";
+          backToTop.style.visibility = "hidden";
+        }
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar-modern");
+        if (window.pageYOffset > 50) {
+          navbar.style.background = "rgba(29, 29, 30, 0.98)";
+        } else {
+          navbar.style.background = "rgba(29, 29, 30, 0.95)";
+        }
+      });
+
+      // Animate stats on scroll
+      function animateStats() {
+        const stats = document.querySelectorAll(".stat-number");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.animation = "countUp 2s ease-out";
+            }
+          });
+        });
+
+        stats.forEach((stat) => observer.observe(stat));
+      }
+
+      document.addEventListener("DOMContentLoaded", animateStats);
+    </script>
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZGDNCX5SK7"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-      gtag('config', 'G-ZGDNCX5SK7');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZGDNCX5SK7");
     </script>
   </body>
 </html>
