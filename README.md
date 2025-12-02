@@ -5,7 +5,7 @@
 # <img src="https://pridebot.xyz/pridebotlogo.png" width="32" height="32" style="vertical-align: -6px;"> Pridebot Website
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fpridebot.xyz&style=for-the-badge&logo=google-chrome&logoColor=white&label=Website)](https://pridebot.xyz)
-  [![Discord](https://img.shields.io/badge/Discord-Support-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://pridebot.xyz/support)
+[![Uptime](https://img.shields.io/endpoint?url=https://pridebot.xyz/api/uptime-badge&style=for-the-badge)](https://pridebot.xyz)
 
 [🚀 Invite to Server](https://pridebot.xyz/invite) • [📚 Documentation](https://pridebot.xyz) • [💬 Support Server](https://pridebot.xyz/support) • [💎 Premium](https://pridebot.xyz/premium)
 

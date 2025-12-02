@@ -32,13 +32,35 @@ app.get("/tos", sendPage("legal", "tos.html"));
 app.get("/privacy", sendPage("legal", "privacy.html"));
 
 app.get("/api/serverstats", (req, res) => {
+  const uptimeSeconds = Math.floor((Date.now() - serverStart.getTime()) / 1000);
   res.json({
     message: "Server start time",
     startTime: serverStart.toISOString(),
     timestamp: Math.floor(serverStart.getTime() / 1000),
-    uptime: Math.floor((Date.now() - serverStart.getTime()) / 1000),
+    uptime: uptimeSeconds,
+    uptimeFormatted: formatUptime(uptimeSeconds),
   });
 });
+
+app.get("/api/uptime-badge", (req, res) => {
+  const uptimeSeconds = Math.floor((Date.now() - serverStart.getTime()) / 1000);
+  res.json({
+    schemaVersion: 1,
+    label: "uptime",
+    message: formatUptime(uptimeSeconds),
+    color: "brightgreen",
+  });
+});
+
+function formatUptime(seconds) {
+  const days = Math.floor(seconds / 86400);
+  const hours = Math.floor((seconds % 86400) / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  
+  if (days > 0) return `${days}d ${hours}h`;
+  if (hours > 0) return `${hours}h ${minutes}m`;
+  return `${minutes}m`;
+}
 
 app.get("/:imageName", async (req, res) => {
   const { imageName } = req.params;
