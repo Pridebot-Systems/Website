@@ -46,15 +46,20 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ8MNVWBY9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LZ8MNVWBY9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-LZ8MNVWBY9');
-</script>
+    gtag("config", "G-LZ8MNVWBY9");
+  </script>
 
   <body style="background-color: var(--background)">
     <!-- Navigation -->
@@ -89,8 +94,8 @@
         <button
           class="navbar-toggler border-0"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-toggle="collapse"
+          data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -102,33 +107,9 @@
             <li class="nav-item">
               <a
                 class="nav-link nav-link-modern"
-                href="#features"
-                style="color: var(--text-color)"
-                >Features</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-modern"
-                href="#stats"
-                style="color: var(--text-color)"
-                >Stats</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-modern"
                 href="#commands"
                 style="color: var(--text-color)"
                 >Commands</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-modern"
-                href="https://pridebot.xyz/invite"
-                style="color: var(--text-color)"
-                >Invite</a
               >
             </li>
             <li class="nav-item">
@@ -159,6 +140,14 @@
               <a
                 class="nav-link nav-link-modern"
                 href="https://pfp.pridebot.xyz"
+                style="color: var(--text-color)"
+                >PFPs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://profile.pridebot.xyz"
                 style="color: var(--text-color)"
                 >Profiles</a
               >
@@ -608,6 +597,7 @@
 
     <!-- Scripts -->
     <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/Counting.js"></script>
     <script src="../assets/js/untitled.js"></script>
@@ -675,6 +665,5 @@
 
       document.addEventListener("DOMContentLoaded", animateStats);
     </script>
-
   </body>
 </html>
