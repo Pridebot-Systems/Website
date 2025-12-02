@@ -1,83 +1,61 @@
 import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import fs from "fs";
+import fs from "fs/promises";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const port = 8081;
+const PORT = 8081;
+const PUBLIC_DIR = join(__dirname, "../../../public");
 const app = express();
+const serverStart = new Date();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/assets", express.static(join(PUBLIC_DIR, "assets")));
 
-app.use("/assets", express.static(join(__dirname, "../../../public/assets")));
+const sendPage = (folder, file) => (req, res) => {
+  res.sendFile(join(PUBLIC_DIR, folder, file));
+};
 
-const serverStart = new Date();
-const serverStartformat = Math.floor(serverStart.getTime() / 1000);
+app.get("/", sendPage("sites", "index.html"));
+app.get("/morbius", sendPage("sites", "morbius.html"));
+app.get("/partners", sendPage("sites", "partners.html"));
 
-// Sites
-app.get("/", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/sites/index.html"))
-);
-app.get("/morbius", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/sites/morbius.html"))
-);
-app.get("/partners", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/sites/partners.html"))
-);
-app.get("/profiles/:userId", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/sites/profiles.html"))
-);
+app.get("/github", sendPage("redirects", "github.html"));
+app.get("/github/organization", sendPage("redirects", "githuborg.html"));
+app.get("/invite", sendPage("redirects", "invite.html"));
+app.get("/premium", sendPage("redirects", "premium.html"));
+app.get("/support", sendPage("redirects", "support.html"));
 
-// Redirects
-app.get("/github", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/redirects/github.html"))
-);
-app.get("/github/organization", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/redirects/githuborg.html"))
-);
-app.get("/invite", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/redirects/invite.html"))
-);
-app.get("/premium", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/redirects/premium.html"))
-);
-app.get("/support", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/redirects/support.html"))
-);
-
-// Legal
-app.get("/tos", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/legal/tos.html"))
-);
-app.get("/privacy", (req, res) =>
-  res.sendFile(join(__dirname, "../../../public/legal/privacy.html"))
-);
-
-app.get("/:imageName", (req, res) => {
-  const imageName = req.params.imageName;
-  const imagePath = join(__dirname, "../../assets/images", imageName);
-
-  console.log(`Requested image: ${imageName}`);
-  console.log(`Looking for image at: ${imagePath}`);
-  fs.access(imagePath, fs.constants.F_OK, (err) => {
-    if (err) {
-      console.error(`Image not found: ${imagePath}`);
-      res.status(404).send("Image not found");
-    } else {
-      res.sendFile(imagePath);
-    }
-  });
-});
+app.get("/tos", sendPage("legal", "tos.html"));
+app.get("/privacy", sendPage("legal", "privacy.html"));
 
 app.get("/api/serverstats", (req, res) => {
   res.json({
     message: "Server start time",
-    startTime: serverStart,
-    formatedStartTime: serverStartformat,
+    startTime: serverStart.toISOString(),
+    timestamp: Math.floor(serverStart.getTime() / 1000),
+    uptime: Math.floor((Date.now() - serverStart.getTime()) / 1000),
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.get("/:imageName", async (req, res) => {
+  const { imageName } = req.params;
+  const imagePath = join(PUBLIC_DIR, "assets/images", imageName);
+
+  try {
+    await fs.access(imagePath);
+    res.sendFile(imagePath);
+  } catch {
+    console.error(`Image not found: ${imageName}`);
+    res.status(404).send("Image not found");
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`
+  Local:  http://localhost:${PORT}
+  Started: ${serverStart.toLocaleString()}
+  `);
 });
