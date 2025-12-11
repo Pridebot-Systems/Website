@@ -32,18 +32,18 @@
       sizes="300x250"
       href="https://pridebot.xyz/pridebotlogo.png"
     />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Alfa+Slab+One"
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@300;400;500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/ionicons.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
     <style>
       .content {
         margin: 0 auto;
@@ -57,442 +57,765 @@
     </style>
   </head>
 
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LZ8MNVWBY9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LZ8MNVWBY9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-LZ8MNVWBY9');
-</script>
+    gtag("config", "G-LZ8MNVWBY9");
+  </script>
 
   <body style="background-color: var(--background)">
-    <div id="top" style="height: 12px">
-      <nav
-        class="navbar navbar-light navbar-expand fixed-top"
-        style="
-          color: var(--main-color);
-          border-top-width: 6px;
-          border-top-style: solid;
-          background: var(--background);
-        "
-      >
-        <div class="container-fluid">
-          <a
-            class="navbar-brand"
-            href="https://pridebot.xyz"
-            style="
-              color: var(--main-color);
-              font-family: 'Alfa Slab One', cursive;
-            "
-          >
-            Home
-          </a>
-          <a
-            class="navbar-brand"
-            href="https://pridebot.xyz/tos"
-            style="
-              color: var(--main-color);
-              font-family: 'Alfa Slab One', cursive;
-            "
-          >
-            TOS </a
-          ><button
-            data-toggle="collapse"
-            class="navbar-toggler"
-            data-target="#navcol-1"
-          >
-            <span class="sr-only">Toggle navigation</span
-            ><span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://discord.com/oauth2/authorize?client_id=1101256478632972369&permissions=415001594945&scope=bot%20applications.commands"
-                  style="color: var(--text-color)"
-                  >Invite</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://discord.gg/guybqSTzdS"
-                  style="color: var(--text-color)"
-                  >Support</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-    <div class="content">
-      <header class="center-header">
-        <img
-          class="rounded"
-          src="https://pridebot.xyz/pridebotlogo.png"
-          width="200"
-          height="200"
-          style="margin-top: 15px"
-        />
-        <h1 style="color: var(--text-color)">Pridebot Privacy Policy</h1>
-        <p style="color: var(--text-color)">
-          <strong>Last Updated:</strong> August 22, 2024
-        </p>
-      </header>
-
-      <div style="color: var(--text-color); margin-top: 50px">
-        <h3 id="data-collection">1. Data Collection</h3>
-        <p>Pridebot collects the following data:</p>
-        <ul>
-          <li>
-            <strong>User IDs:</strong>
-            <ul>
-              <li>
-                <strong>Server Logging:</strong> To track and log user actions
-                within servers for moderation and troubleshooting.
-              </li>
-              <li>
-                <strong>Command Logging:</strong> To monitor the usage of
-                commands and analyze how the bot is used to improve
-                functionality.
-              </li>
-              <li>
-                <strong>Profile Filing:</strong> To store and manage user
-                profiles, including custom fields.
-              </li>
-              <li>
-                <strong>Pride Avatar Filing:</strong> To store and manage users
-                avatars.
-              </li>
-              <li>
-                <strong>Bot Votes:</strong> To record and display the number of
-                votes received on bot listing platforms.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Server IDs:</strong>
-            <ul>
-              <li>
-                <strong>Server Logging:</strong> To track and log activities
-                across different servers where Pridebot is active, helping with
-                analytics and moderation.
-              </li>
-              <li>
-                <strong>Command Logging:</strong> To keep track of command usage
-                within each server to tailor features and support.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>User Profile Pictures:</strong>
-            <ul>
-              <li>
-                <strong>Pride Avatar Creation:</strong> To allow users to create
-                customized pride avatars based on their profile pictures.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>User Profile Information:</strong>
-            <ul>
-              <li>
-                <strong>Profile Display:</strong> To allow users to customize
-                and display their profiles, including pronouns, sexual
-                orientation, romantic orientation, and gender identity.
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <h3 id="data-use">2. Use of Data</h3>
-        <p>The collected data is used for the following purposes:</p>
-        <ul>
-          <li>
-            <strong>Security:</strong>
-            <ul>
-              <li>
-                Monitoring and ensuring the security of the services by tracking
-                user and server activity to prevent abuse, detect suspicious
-                behavior, and maintain a safe environment.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Development:</strong>
-            <ul>
-              <li>
-                Improving the features and functionality of Pridebot based on
-                user interaction data, including command usage statistics and
-                user feedback, to provide a better user experience.
-              </li>
-              <li>
-                Enhancing profile and avatar features by analyzing how users
-                engage with these tools, allowing for targeted updates and new
-                functionalities.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>Client Usage:</strong>
-            <ul>
-              <li>
-                Enabling users to interact with Pridebot effectively, ensuring
-                that commands, features, and services function as intended and
-                meet user needs.
-              </li>
-              <li>
-                Understanding how commands and websites associated with Pridebot
-                are used, enabling the optimization of services and ensuring
-                that they meet user needs.
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <h3 id="data-sharing">3. Data Sharing</h3>
-        <p>
-          We do not share your data with third parties except in the following
-          circumstances:
-        </p>
-        <ul>
-          <li>
-            When required by law or to respond to legal processes, such as
-            subpoenas or court orders.
-          </li>
-          <li>
-            To protect the rights, property, or safety of our users, Pridebot,
-            or others, including enforcing our Terms of Service and preventing
-            fraud or security breaches.
-          </li>
-        </ul>
-
-        <h3 id="data-security">4. Data Security</h3>
-        <p>
-          All User IDs, Server IDs and User Profile Information is securely
-          stored in
-          <a
-            href="https://www.mongodb.com/products/capabilities/security"
-            style="color: var(--main-color)"
-            >MongoDB encrypted database</a
-          >. All Profile Pictures are stored in bot files which can only be
-          accessed by
-          <a
-            href="https://discordapp.com/users/691506668781174824"
-            style="color: var(--main-color)"
-            >Sdriver1</a
-          >. However, please note that no security system is impenetrable, and
-          we cannot guarantee the absolute security of your data. We
-          continuously review and enhance our security practices to safeguard
-          your information.
-        </p>
-
-        <h3 id="data-deletion">5. Data Deletion</h3>
-        <p>
-          If you wish to have your data deleted, please contact
-          <a
-            href="https://discordapp.com/users/691506668781174824"
-            style="color: var(--main-color)"
-            >Sdriver1</a
-          >
-          or in the
-          <a
-            href="https://pridebot.xyz/support"
-            style="color: var(--main-color)"
-            >Support Server</a
-          >. We will process your request and delete your data from our records.
-        </p>
-
-        <h3 id="changes">6. Changes to the Privacy Policy</h3>
-        <p>
-          We reserve the right to update this Privacy Policy at any time. Your
-          continued use of Pridebot after any changes will constitute your
-          acceptance of the new terms.
-        </p>
-
-        <h3 id="contact">7. Contact Us</h3>
-        <p>
-          If you have any questions about this Privacy Policy, please contact
-          <a
-            href="https://discordapp.com/users/691506668781174824"
-            style="color: var(--main-color)"
-            >Sdriver1</a
-          >
-          or ask for help in the
-          <a
-            href="https://pridebot.xyz/support"
-            style="color: var(--main-color)"
-            >Support Server</a
-          >.
-        </p>
-      </div>
-    </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="var(--secondary)"
-        fill-opacity="1"
-        d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,218.7C672,224,768,192,864,181.3C960,171,1056,181,1152,192C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="footer-dark">
-      <div class="row">
-        <div class="col item social">
-          <a class="smoothScroll" href="#top">
-            <i class="icon ion-android-arrow-up"></i>
-          </a>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-modern"
+      style="
+        background: rgba(29, 29, 30, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 112, 243, 0.2);
+      "
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center"
+          href="https://pridebot.xyz"
+          style="
+            color: var(--main-color);
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 1.5rem;
+          "
+        >
+          <img
+            src="https://pridebot.xyz/pridebotlogo.png"
+            alt="Pridebot Logo"
+            width="40"
+            height="40"
+            class="me-2 rounded"
+            style="box-shadow: 0 0 15px rgba(255, 112, 243, 0.3)"
+          />
+          Pridebot
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz"
+                style="color: var(--text-color)"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/support"
+                style="color: var(--text-color)"
+                >Support</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-modern"
+                href="https://pridebot.xyz/tos"
+                style="color: var(--text-color)"
+                >TOS</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="row">
-        <div class="col text-center">
-          <p class="copyright" style="color: var(--text-color)">
-            Pridebot © 2023-2024
+    </nav>
+
+    <div class="gradient-wrapper" style="padding-top: 80px">
+      <div class="content">
+        <header class="center-header">
+          <img
+            class="rounded"
+            src="https://pridebot.xyz/pridebotlogo.png"
+            width="200"
+            height="200"
+            style="margin-top: 20px; border-radius: 20px"
+          />
+          <h1
+            style="
+              color: var(--text-color);
+              font-family: 'Alfa Slab One', cursive;
+              margin-top: 15px;
+              font-size: 2.5rem;
+            "
+          >
+            Pridebot Privacy Policy
+          </h1>
+          <p style="color: var(--secondary-text-color); font-size: 1.1rem">
+            <strong>Last Updated:</strong> December 11, 2025
           </p>
-          <p class="developed-by" style="color: var(--text-color)">
-            Developed by
+        </header>
+
+        <div
+          style="
+            color: var(--text-color);
+            margin-top: 50px;
+            background: var(--secondary);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          "
+        >
+          <h3
+            id="data-collection"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-bottom: 20px;
+            "
+          >
+            1. Data Collection
+          </h3>
+          <p>Pridebot collects and stores the following data:</p>
+          <ul>
+            <li>
+              <strong>User IDs (Discord User IDs):</strong>
+              <ul>
+                <li>
+                  <strong>Command Usage Logging:</strong> To track which
+                  commands are being used and how frequently, helping us improve
+                  bot functionality and user experience.
+                </li>
+                <li>
+                  <strong>User Profiles:</strong> To store and manage custom
+                  user profiles, including user-set pronouns, sexual
+                  orientation, romantic orientation, gender identity, and
+                  optional biography.
+                </li>
+                <li>
+                  <strong>Pride Avatars:</strong> To associate generated pride
+                  flag avatars with users who create them.
+                </li>
+                <li>
+                  <strong>Bot Votes:</strong> To record and track votes received
+                  from bot listing platforms (Top.gg, DiscordList, etc.) and
+                  provide vote rewards.
+                </li>
+                <li>
+                  <strong>Premium Subscriptions:</strong> To track premium
+                  membership status and associated benefits for users who
+                  subscribe.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Server IDs (Discord Guild IDs):</strong>
+              <ul>
+                <li>
+                  <strong>Server Configuration:</strong> To store
+                  server-specific settings and preferences set by server
+                  administrators.
+                </li>
+                <li>
+                  <strong>Command Usage Analytics:</strong> To track which
+                  servers use which features, helping us understand usage
+                  patterns and improve the bot.
+                </li>
+                <li>
+                  <strong>Server Count:</strong> For displaying accurate server
+                  statistics on our website and bot listing platforms.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>User Avatars (Profile Pictures):</strong>
+              <ul>
+                <li>
+                  <strong>Pride Avatar Generation:</strong> User profile
+                  pictures are temporarily processed to create customized pride
+                  flag avatars. The original avatar images are not permanently
+                  stored beyond the generation process.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Custom User Profile Data:</strong>
+              <ul>
+                <li>
+                  <strong>Profile Information:</strong> User-provided
+                  information including pronouns, sexual orientation, romantic
+                  orientation, gender identity, biography, and custom profile
+                  fields that users voluntarily choose to set.
+                </li>
+                <li>
+                  <strong>Profile Customization:</strong> User preferences for
+                  profile display, including colors, themes, and visibility
+                  settings.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Command Interaction Data:</strong>
+              <ul>
+                <li>
+                  <strong>Usage Statistics:</strong> General statistics about
+                  command usage, including which commands are most popular,
+                  response times, and error rates.
+                </li>
+                <li>
+                  <strong>Error Logs:</strong> When commands fail or encounter
+                  errors, we log basic information to help us debug and fix
+                  issues.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Website Analytics:</strong>
+              <ul>
+                <li>
+                  <strong>Google Analytics:</strong> We use Google Analytics to
+                  track website visits, page views, and general usage patterns
+                  to improve our website experience. This includes standard web
+                  analytics data such as IP addresses (anonymized), browser
+                  types, and referral sources.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p style="margin-top: 20px">
+            <strong>What We Do NOT Collect:</strong>
+          </p>
+          <ul>
+            <li>
+              Message content or conversations (we do not read or store your
+              messages)
+            </li>
+            <li>Voice chat data or recordings</li>
+            <li>
+              Direct messages (DMs) sent to the bot are not permanently stored
+            </li>
+            <li>
+              Personal information beyond what you voluntarily provide in your
+              profile
+            </li>
+            <li>
+              Payment information (handled securely by third-party payment
+              processors)
+            </li>
+            <li>Passwords or authentication tokens</li>
+          </ul>
+          <h3
+            id="data-use"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            2. Use of Data
+          </h3>
+          <p>The collected data is used for the following purposes:</p>
+          <ul>
+            <li>
+              <strong>Security:</strong>
+              <ul>
+                <li>
+                  Monitoring and ensuring the security of the services by
+                  tracking user and server activity to prevent abuse, detect
+                  suspicious behavior, and maintain a safe environment.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Development:</strong>
+              <ul>
+                <li>
+                  Improving the features and functionality of Pridebot based on
+                  user interaction data, including command usage statistics and
+                  user feedback, to provide a better user experience.
+                </li>
+                <li>
+                  Enhancing profile and avatar features by analyzing how users
+                  engage with these tools, allowing for targeted updates and new
+                  functionalities.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Client Usage:</strong>
+              <ul>
+                <li>
+                  Enabling users to interact with Pridebot effectively, ensuring
+                  that commands, features, and services function as intended and
+                  meet user needs.
+                </li>
+                <li>
+                  Understanding how commands and websites associated with
+                  Pridebot are used, enabling the optimization of services and
+                  ensuring that they meet user needs.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3
+            id="data-sharing"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            3. Data Sharing
+          </h3>
+          <p>
+            We do not share your data with third parties except in the following
+            circumstances:
+          </p>
+          <ul>
+            <li>
+              When required by law or to respond to legal processes, such as
+              subpoenas or court orders.
+            </li>
+            <li>
+              To protect the rights, property, or safety of our users, Pridebot,
+              or others, including enforcing our Terms of Service and preventing
+              fraud or security breaches.
+            </li>
+          </ul>
+
+          <h3
+            id="data-security"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            4. Data Security
+          </h3>
+          <p>
+            We take the security of your data seriously and implement multiple
+            measures to protect it:
+          </p>
+          <ul>
+            <li>
+              <strong>Database Security:</strong> All User IDs, Server IDs, User
+              Profile Information, and bot configuration data are securely
+              stored in a
+              <a
+                href="https://www.mongodb.com/products/capabilities/security"
+                style="
+                  color: var(--main-color);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >MongoDB encrypted database</a
+              >
+              with authentication and access controls.
+            </li>
+            <li>
+              <strong>Access Control:</strong> Database access is restricted and
+              only accessible by the bot developer (<a
+                href="https://discordapp.com/users/691506668781174824"
+                style="
+                  color: var(--main-color);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >Sdriver1</a
+              >)
+            </li>
+            <li>
+              <strong>Data Encryption:</strong> Data is encrypted both in
+              transit (using HTTPS/TLS) and at rest in our database.
+            </li>
+            <li>
+              <strong>Limited Retention:</strong> We only retain data for as
+              long as necessary to provide our services or as required by law.
+            </li>
+            <li>
+              <strong>Regular Security Updates:</strong> Our systems and
+              dependencies are regularly updated to patch security
+              vulnerabilities.
+            </li>
+          </ul>
+          <p style="margin-top: 20px">
+            However, please note that no security system is impenetrable, and we
+            cannot guarantee absolute security of your data. We continuously
+            review and enhance our security practices to safeguard your
+            information and will notify users in the event of any data breach as
+            required by applicable laws.
+          </p>
+
+          <h3
+            id="data-deletion"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            5. Data Deletion
+          </h3>
+          <p>
+            You have the right to request deletion of your personal data at any
+            time. We provide three convenient ways to submit a data deletion
+            request:
+          </p>
+          <ul>
+            <li>
+              <strong>In-Bot Command:</strong> Use the
+              <code
+                style="
+                  background: rgba(255, 112, 243, 0.2);
+                  padding: 2px 6px;
+                  border-radius: 4px;
+                "
+                >/feedback</code
+              >
+              command within Discord and select "Data Deletion Request" to
+              submit your request directly through the bot.
+            </li>
+            <li>
+              <strong>Direct Contact:</strong> Contact the bot developer
+              <a
+                href="https://discordapp.com/users/691506668781174824"
+                style="
+                  color: var(--main-color);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >Sdriver1</a
+              >
+              directly via Discord DM with your deletion request.
+            </li>
+            <li>
+              <strong>Support Server:</strong> Join our
+              <a
+                href="https://pridebot.xyz/support"
+                style="
+                  color: var(--main-color);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >Support Server</a
+              >
+              and alert a developer of your request.
+            </li>
+          </ul>
+          <p style="margin-top: 15px">
+            Once we receive your deletion request, we will process it promptly
+            and delete your data from our records within 30 days.
+          </p>
+
+          <h3
+            id="changes"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            6. Changes to the Privacy Policy
+          </h3>
+          <p>
+            We reserve the right to update this Privacy Policy at any time. Your
+            continued use of Pridebot after any changes will constitute your
+            acceptance of the new terms.
+          </p>
+
+          <h3
+            id="contact"
+            style="
+              color: var(--main-color);
+              font-weight: 600;
+              margin-top: 40px;
+              margin-bottom: 20px;
+            "
+          >
+            7. Contact Us
+          </h3>
+          <p>
+            If you have any questions about this Privacy Policy, please contact
             <a
               href="https://discordapp.com/users/691506668781174824"
-              style="color: var(--main-color)"
+              style="
+                color: var(--main-color);
+                text-decoration: none;
+                font-weight: 500;
+              "
               >Sdriver1</a
             >
+            or ask for help in the
+            <a
+              href="https://pridebot.xyz/support"
+              style="
+                color: var(--main-color);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >Support Server</a
+            >.
           </p>
         </div>
       </div>
-      <div class="container">
-        <div class="footer-links" style="padding: 20px">
-          <a
-            href="https://github.com/Sdriver1/Pridebot"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <i
-              class="fa fa-github"
-              aria-hidden="true"
-              style="font-size: 24px; vertical-align: middle"
-            ></i>
-            <span style="vertical-align: middle">GitHub</span>
-          </a>
-          <a
-            href="https://discord.gg/guybqSTzdS"
-            class="footer-link-item"
-            style="
-              color: var (--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.discordapp.com/emojis/1108417509624926228.png"
-              alt="Wumpus Store Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Support Server</span>
-          </a>
 
-          <div class="link-divider"></div>
-          <a
-            href="https://discordlist.gg/bot/1101256478632972369/vote"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://discordlist.gg/img/brand/logo.svg"
-              alt="discordlist Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">DiscordList</span>
-          </a>
-          <a
-            href="https://top.gg/bot/1101256478632972369/vote"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.discordapp.com/emojis/1195866944482590731.png"
-              alt="Topgg Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Top.gg</span>
-          </a>
-          <div class="link-divider"></div>
-          <a
-            href="https://x.com/pridebotdiscord?s=21&t=vvy-KvCpsjPgQFNN8_DkAQ"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
-              alt="Twitter Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">𝕏/Twitter</span>
-          </a>
-          <a
-            href="https://www.tiktok.com/@pridebotdiscord?_t=8kSLVmDoEcp&_r=1"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 0px;
-              text-decoration: none;
-            "
-          >
-            <img
-              src="https://cdn.inspireuplift.com/uploads/images/seller_products/1690970852_a2-01.png"
-              alt="Tiktok Icon"
-              style="width: 24px; height: auto; vertical-align: middle"
-            />
-            <span style="vertical-align: middle">Tiktok</span>
-          </a>
-          <div class="link-divider"></div>
-          <a
-            href="https://pridebot.xyz/tos"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 20px;
-              text-decoration: none;
-            "
-          >
-            <span style="vertical-align: middle">TOS</span>
-          </a>
-          <a
-            href="https://pridebot.xyz/privacy"
-            class="footer-link-item"
-            style="
-              color: var(--text-color);
-              margin-right: 30px;
-              text-decoration: none;
-            "
-          >
-            <span style="vertical-align: middle">Privacy Policy</span>
+      <!-- Footer -->
+      <footer class="footer-section" style="background: var(--secondary)">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 text-center mb-4">
+              <a
+                href="#"
+                class="footer-logo d-inline-flex align-items-center text-decoration-none mb-3"
+              >
+                <img
+                  src="https://pridebot.xyz/pridebotlogo.png"
+                  alt="Pridebot Logo"
+                  width="32"
+                  height="32"
+                  class="me-2 rounded"
+                />
+                <span
+                  style="
+                    color: var(--main-color);
+                    font-family: 'Alfa Slab One', cursive;
+                    font-size: 1.25rem;
+                  "
+                >
+                  Pridebot
+                </span>
+              </a>
+              <p
+                style="color: var(--secondary-text-color); margin-bottom: 2rem"
+              >
+                Making Discord communities more inclusive, one server at a time.
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="footer-links-grid">
+                <!-- Community Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Community
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://github.com/Pridebot-Systems/Pridebot"
+                      class="footer-link"
+                    >
+                      <i class="fa fa-github me-2"></i>GitHub
+                    </a>
+                    <a href="https://pridebot.xyz/support" class="footer-link">
+                      <img
+                        src="https://cdn.discordapp.com/emojis/1108417509624926228.png"
+                        alt="Discord"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      Support Server
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Vote Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Vote for Us
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://discordlist.gg/bot/1101256478632972369/vote"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://discordlist.gg/img/brand/logo.svg"
+                        alt="DiscordList"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      DiscordList
+                    </a>
+                    <a
+                      href="https://top.gg/bot/1101256478632972369/vote"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://cdn.discordapp.com/emojis/1195866944482590731.png"
+                        alt="Top.gg"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      Top.gg
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Follow Us
+                  </h6>
+                  <div class="footer-links-list">
+                    <a
+                      href="https://x.com/pridebotdiscord?s=21&t=vvy-KvCpsjPgQFNN8_DkAQ"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
+                        alt="X/Twitter"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      𝕏/Twitter
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@pridebotdiscord?_t=8kSLVmDoEcp&_r=1"
+                      class="footer-link"
+                    >
+                      <img
+                        src="https://cdn.inspireuplift.com/uploads/images/seller_products/1690970852_a2-01.png"
+                        alt="TikTok"
+                        width="16"
+                        height="16"
+                        class="me-2"
+                      />
+                      TikTok
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="footer-links-section">
+                  <h6 style="color: var(--text-color); margin-bottom: 1rem">
+                    Legal
+                  </h6>
+                  <div class="footer-links-list">
+                    <a href="https://pridebot.xyz/tos" class="footer-link"
+                      >Terms of Service</a
+                    >
+                    <a href="https://pridebot.xyz/privacy" class="footer-link"
+                      >Privacy Policy</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 2rem 0" />
+
+          <div class="row">
+            <div class="col-12 text-center">
+              <p
+                style="
+                  color: var(--secondary-text-color);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                © 2023-2025 Pridebot. All rights reserved.
+              </p>
+              <p style="color: var(--secondary-text-color); margin-bottom: 0">
+                Developed with ❤️ by
+                <a
+                  href="https://sdriver1.dev"
+                  style="color: var(--main-color); text-decoration: none"
+                >
+                  Sdriver1
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top">
+          <a href="#" class="btn-back-to-top">
+            <i class="fa fa-arrow-up"></i>
           </a>
         </div>
-      </div>
+      </footer>
     </div>
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/Counting.js"></script>
-    <script src="assets/js/untitled.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/Counting.js"></script>
+    <script src="../assets/js/untitled.js"></script>
+
+    <!-- Smooth Scrolling -->
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // Back-to-top or brand links that are just "#"
+      document.querySelectorAll('a[href="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+
+      // Back to top button functionality
+      window.addEventListener("scroll", function () {
+        const backToTop = document.querySelector(".btn-back-to-top");
+        if (backToTop) {
+          if (window.pageYOffset > 300) {
+            backToTop.style.opacity = "1";
+            backToTop.style.visibility = "visible";
+          } else {
+            backToTop.style.opacity = "0";
+            backToTop.style.visibility = "hidden";
+          }
+        }
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar-modern");
+        if (navbar) {
+          if (window.pageYOffset > 50) {
+            navbar.style.background = "rgba(29, 29, 30, 0.98)";
+          } else {
+            navbar.style.background = "rgba(29, 29, 30, 0.95)";
+          }
+        }
+      });
+    </script>
   </body>
 </html>
