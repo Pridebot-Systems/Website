@@ -7,8 +7,38 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const PORT = 8081;
 const PUBLIC_DIR = join(__dirname, "../../../public");
+const IMAGES_DIR = join(PUBLIC_DIR, "assets/images");
 const app = express();
 const serverStart = new Date();
+
+const ICON_MAP = {
+  pridecordIcon: "pridecord.png",
+  pridebotIcon: "pridebotlogo.png",
+};
+
+async function updateServerImages() {
+  try {
+    const res = await fetch("https://api.pridebot.xyz/serverstats");
+    const data = await res.json();
+
+    for (const [key, filename] of Object.entries(ICON_MAP)) {
+      if (data[key]) {
+        const imageUrl = data[key].replace(".webp", ".png");
+        const imgRes = await fetch(imageUrl);
+        if (imgRes.ok) {
+          const buffer = Buffer.from(await imgRes.arrayBuffer());
+          await fs.writeFile(join(IMAGES_DIR, filename), buffer);
+          console.log(`Updated ${filename}`);
+        }
+      }
+    }
+  } catch (error) {
+    console.error("Failed to update server images:", error);
+  }
+}
+
+updateServerImages();
+setInterval(updateServerImages, 30 * 60 * 1000);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -56,7 +86,7 @@ function formatUptime(seconds) {
   const days = Math.floor(seconds / 86400);
   const hours = Math.floor((seconds % 86400) / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
-  
+
   if (days > 0) return `${days}d ${hours}h`;
   if (hours > 0) return `${hours}h ${minutes}m`;
   return `${minutes}m`;
