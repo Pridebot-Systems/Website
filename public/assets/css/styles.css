@@ -96,6 +96,41 @@ body {
   width: 80%;
 }
 
+/* User Nav Overrides (from user-nav.js) */
+.navbar > .container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav.ms-auto {
+  align-items: center;
+}
+
+.navbar .user-nav-container {
+  position: relative;
+  z-index: 10000;
+}
+
+.navbar .user-nav-avatar {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.navbar .user-nav-dropdown {
+  z-index: 10001 !important;
+}
+
+.navbar .user-nav-login {
+  padding: 8px 18px !important;
+  font-size: 0.95rem !important;
+}
+
+.navbar,
+.navbar .container,
+.navbar .navbar-collapse {
+  overflow: visible !important;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
