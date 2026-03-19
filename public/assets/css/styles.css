@@ -270,6 +270,7 @@ body {
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   background: linear-gradient(135deg, #fff 0%, #ff70f3 50%, #ff00ea 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -479,7 +480,8 @@ body {
   z-index: 1;
 }
 
-.feature-icon img {
+.feature-icon img,
+.feature-icon i {
   position: relative;
   z-index: 2;
 }
@@ -510,25 +512,11 @@ body {
   background: linear-gradient(
     180deg,
     var(--secondary) 0%,
-    var(--background) 50%,
+    var(--background) 60%,
     var(--background) 100%
   );
-  padding: 6rem 0;
+  padding: 4rem 0 5rem;
   position: relative;
-}
-
-.stats-section .container {
-  margin-top: 200px;
-  margin-bottom: -50px;
-}
-
-.stats-wave-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
 }
 
 .stat-card {
@@ -623,7 +611,21 @@ body {
   line-height: 0;
 }
 
-/* Modern Accordion */
+/* Modern Accordion — Bootstrap 5 variable resets */
+.modern-accordion {
+  --bs-accordion-bg: var(--background);
+  --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
+  --bs-accordion-btn-bg: transparent;
+  --bs-accordion-btn-color: var(--text-color);
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: var(--text-color);
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+  --bs-accordion-border-radius: 15px;
+  --bs-accordion-inner-border-radius: 14px;
+}
+
 .modern-accordion .accordion-item {
   background: var(--background);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -640,9 +642,9 @@ body {
 }
 
 .modern-accordion .accordion-button {
-  background: transparent;
+  background: transparent !important;
   border: none;
-  color: var(--text-color);
+  color: var(--text-color) !important;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1.5rem 2rem;
@@ -650,20 +652,22 @@ body {
   text-align: left;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: none !important;
 }
 
 .modern-accordion .accordion-button:hover {
-  color: var(--main-color);
-  background: rgba(255, 112, 243, 0.05);
+  color: var(--main-color) !important;
+  background: rgba(255, 112, 243, 0.05) !important;
 }
 
 .modern-accordion .accordion-button:focus {
-  box-shadow: none;
+  box-shadow: none !important;
   outline: none;
 }
 
 .modern-accordion .accordion-button::after {
   content: "+";
+  background-image: none !important;
   position: absolute;
   right: 2rem;
   top: 50%;
@@ -672,6 +676,8 @@ body {
   font-weight: 300;
   color: var(--main-color);
   transition: all 0.3s ease;
+  width: auto;
+  height: auto;
 }
 
 .modern-accordion .accordion-button[aria-expanded="true"]::after {
@@ -679,14 +685,29 @@ body {
   transform: translateY(-50%) rotate(180deg);
 }
 
+
 .modern-accordion .accordion-content {
   padding: 0 2rem 1.5rem;
   color: var(--secondary-text-color);
 }
 
 .modern-accordion .accordion-content p {
-  margin: 0;
+  margin: 0 0 0.5rem;
   line-height: 1.8;
+}
+
+.accordion-subcategory-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--main-color);
+  opacity: 0.7;
+  margin: 0.75rem 0 0.2rem;
+}
+
+.accordion-subcategory-label:first-child {
+  margin-top: 0;
 }
 
 .modern-accordion .accordion-content strong {
@@ -698,6 +719,12 @@ body {
   margin-right: 0.5rem;
   display: inline-block;
   margin-bottom: 0.5rem;
+}
+
+.modern-accordion .accordion-content strong.preview-cmd-highlight {
+  background: rgba(255, 112, 243, 0.25);
+  box-shadow: 0 0 0 1px rgba(255, 112, 243, 0.5);
+  color: #fff;
 }
 
 /* Footer Styles */
@@ -897,6 +924,390 @@ body {
   background: var(--main-color) !important;
   border-color: var(--main-color) !important;
   color: white !important;
+}
+
+/* Nav Invite Button */
+.btn-nav-invite {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1.1rem;
+  background: var(--gradient-primary);
+  color: white !important;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 112, 243, 0.3);
+  white-space: nowrap;
+}
+
+.btn-nav-invite:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 112, 243, 0.5);
+  color: white !important;
+}
+
+
+/* Command Preview Panel (in commands section) */
+.command-preview-panel {
+  position: sticky;
+  top: 90px;
+  min-height: 200px;
+}
+
+.command-preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border: 2px dashed rgba(255, 112, 243, 0.2);
+  border-radius: 15px;
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+  opacity: 0.6;
+}
+
+.command-preview-placeholder i {
+  color: var(--main-color);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.command-preview-placeholder p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.discord-preview {
+  background: #2b2d31;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  animation: fadeInPreview 0.25s ease;
+}
+
+@keyframes fadeInPreview {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.discord-command-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #b5bac1;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.discord-command-label::before {
+  content: "⌐ ";
+  color: var(--main-color);
+}
+
+.discord-embed {
+  display: flex;
+  background: #1e1f22;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.discord-embed-accent {
+  width: 4px;
+  background: var(--main-color);
+  flex-shrink: 0;
+}
+
+.discord-embed-body {
+  padding: 0.75rem 1rem;
+  flex: 1;
+}
+
+.discord-embed-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.discord-embed-description {
+  font-size: 0.875rem;
+  color: #dbdee1;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.discord-embed-footer {
+  font-size: 0.75rem;
+  color: #87898c;
+  margin-top: 0.6rem;
+}
+
+.preview-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.preview-cmd-pill {
+  background: rgba(255, 112, 243, 0.12);
+  color: var(--main-color);
+  border: 1px solid rgba(255, 112, 243, 0.25);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Discord Message Mock (avatar preview) */
+.discord-mock {
+  background: #313338;
+  border-radius: 12px;
+  padding: 1rem;
+  animation: fadeInPreview 0.25s ease;
+}
+
+.discord-mock-message {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.discord-mock-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.discord-mock-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.discord-mock-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.discord-mock-username {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.discord-mock-app-tag {
+  background: #5865f2;
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.discord-mock-timestamp {
+  color: #87898c;
+  font-size: 0.72rem;
+}
+
+.discord-mock-text {
+  color: #dbdee1;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.discord-mock-embed {
+  display: flex;
+  background: #2b2d31;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 380px;
+}
+
+.discord-mock-embed-accent {
+  width: 4px;
+  background: var(--main-color);
+  flex-shrink: 0;
+}
+
+.discord-mock-embed-body {
+  padding: 0.6rem 0.75rem 0.75rem;
+  flex: 1;
+}
+
+.discord-mock-embed-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.discord-mock-embed-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.discord-mock-embed-footer {
+  font-size: 0.72rem;
+  color: #87898c;
+  line-height: 1.4;
+}
+
+.discord-mock-badge {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 4px;
+  border-radius: 3px;
+}
+
+.discord-mock-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.discord-mock-embed-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin: 0.3rem 0;
+}
+
+.discord-mock-embed-field {
+  min-width: 80px;
+  flex: 1 1 80px;
+}
+
+.discord-mock-embed-field-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #dbdee1;
+  margin-bottom: 0.1rem;
+}
+
+.discord-mock-embed-field-value {
+  font-size: 0.8rem;
+  color: #b5bac1;
+}
+
+.discord-mock-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.discord-mock-vote-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.discord-mock-vote-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.discord-mock-vote-link:hover .discord-mock-vote-name {
+  text-decoration: underline;
+}
+
+.discord-mock-vote-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.discord-mock-vote-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.discord-mock-vote-url {
+  font-size: 0.72rem;
+  color: #00aff4;
+  line-height: 1.2;
+}
+
+.discord-mock-select {
+  background: #1e1f22;
+  color: #87898c;
+  border: 1px solid #3f4147;
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 260px;
+}
+
+.discord-mock-select::after {
+  content: "∨";
+  font-size: 0.75rem;
+  color: #87898c;
+}
+
+.discord-mock-btn {
+  background: #4e5058;
+  color: #dbdee1;
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.15s ease;
+}
+
+.discord-mock-btn:hover {
+  background: #6d6f78;
+  color: #ffffff;
+}
+
+/* Stat Skeleton Loading */
+.stat-loading {
+  opacity: 0.35;
+  animation: statPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes statPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.6; }
 }
 
 /* Legacy styles for compatibility */

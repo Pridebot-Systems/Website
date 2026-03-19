@@ -2,15 +2,25 @@ async function fetchBotStats() {
   try {
     const response = await fetch("https://api.pridebot.xyz/stats");
     const data = await response.json();
+    const statIds = [
+      "totalServers",
+      "totalUsers",
+      "totalcommandsCount",
+      "totalcommandUsage",
+    ];
+    statIds.forEach((id) =>
+      document.getElementById(id)?.classList.remove("stat-loading"),
+    );
+
     document.getElementById("totalServers").textContent =
       data.currentGuildCount.toLocaleString();
     document.getElementById("comptotalServers").textContent = formatServerCount(
-      data.currentGuildCount
+      data.currentGuildCount,
     );
     document.getElementById("totalUsers").textContent =
       data.totalUserCount.toLocaleString();
     document.getElementById("comptotalUsers").textContent = formatUserCount(
-      data.totalUserCount
+      data.totalUserCount,
     );
     document.getElementById("totalcommandsCount").textContent =
       data.commandsCount.toLocaleString();
