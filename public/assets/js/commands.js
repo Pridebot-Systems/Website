@@ -1,10 +1,13 @@
-function updateCommandPreview(category, details) {
+async function updateCommandPreview(category, details) {
   const panel = document.getElementById("commandPreview");
   if (!panel) return;
   const profileTime = new Date().toLocaleTimeString([], {
     hour: "numeric",
     minute: "2-digit",
   });
+
+  const response = await fetch("https://api.pridebot.xyz/stats");
+  const data = await response.json();
 
   if (category.toLowerCase().includes("fun")) {
     panel.innerHTML = `
@@ -63,8 +66,8 @@ function updateCommandPreview(category, details) {
                     <div class="discord-mock-embed-field-value">3</div>
                   </div>
                   <div class="discord-mock-embed-field">
-                    <div class="discord-mock-embed-field-name">Commands Run</div>
-                    <div class="discord-mock-embed-field-value">0</div>
+                    <div class="discord-mock-embed-field-name">Commands Ran</div>
+                    <span class="discord-mock-embed-field-value">${data.totalUsage.toLocaleString()}</span>
                   </div>
                 </div>
                 <div style="color:#dbdee1; font-size:0.8rem; margin: 0.4rem 0;">
@@ -106,6 +109,7 @@ function updateCommandPreview(category, details) {
         </div>
       </div>
     `;
+    fetchTotalUsage();
     return;
   }
 
@@ -375,6 +379,21 @@ function resetCommandPreview() {
       <p>Select a category to preview its commands</p>
     </div>
   `;
+}
+
+function fetchTotalUsage() {
+  fetch("https://api.pridebot.xyz/stats")
+    .then((r) => r.json())
+    .then((stats) => {
+      const el = document.getElementById("totalcommandUsage");
+      if (el) {
+        el.textContent =
+          stats.totalUsage != null ? stats.totalUsage.toLocaleString() : "N/A";
+      }
+    })
+    .catch((err) => {
+      console.error("fetchTotalUsage failed:", err);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
