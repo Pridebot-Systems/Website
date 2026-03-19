@@ -840,6 +840,10 @@ body {
     gap: 1rem;
   }
 
+  .hero-buttons .btn {
+    margin-inline-end: 0 !important;
+  }
+
   .btn-hero {
     width: 100%;
     max-width: 320px;
