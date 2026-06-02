@@ -32,6 +32,9 @@ async function fetchBotStats() {
 }
 
 function formatServerCount(count) {
+  if (count >= 1000) {
+    return (count / 1000).toFixed(1) + "k+";
+  }
   if (count >= 100) {
     return Math.floor(count / 10) * 10 + "+";
   }
@@ -39,6 +42,9 @@ function formatServerCount(count) {
 }
 
 function formatUserCount(count) {
+  if (count >= 1000000) {
+    return (count / 1000000).toFixed(1) + "M+";
+  }
   if (count >= 1000) {
     return (count / 1000).toFixed(1) + "k+";
   }
